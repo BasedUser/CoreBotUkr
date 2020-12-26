@@ -99,19 +99,24 @@ public class Messages extends ListenerAdapter{
 
     @Override
     public void onGuildMemberJoin(GuildMemberJoinEvent event){
+        StringBuilder builder = new StringBuilder();
         try{
             event.getUser().openPrivateChannel().complete().sendMessage(
-            "**Welcome to the Mindustry Discord.**" +
+            "**Welcome to the Mindustry #social Discord.**" +
             "\n\n*Make sure you read #rules and the channel topics before posting.*\n\n" +
-            "**View a list of all frequently answered questions here:**\n<https://discordapp.com/channels/391020510269669376/611204372592066570/611586644402765828>"
+            "Note that this server has different moderation than the official Mindustry Discord. ***Your experience may vary.***"
             ).queue();
         }catch(Exception ignored){
             //may not be able to send messages to this user, ignore
         }
+        builder.append("Welcome <@");
+	builder.append(event.getUser().getId());
+	builder.append("> to the #social Discord!");
+        guild.getTextChannelById(CoreBot.generalChannelID).sendMessage(builder.toString()).queue();
     }
 
     public void sendUpdate(VersionInfo info){
-        String text = info.description;
+        /*String text = info.description;
         int maxLength = 2000;
         while(true){
             String current = text.substring(0, Math.min(maxLength, text.length()));
@@ -126,7 +131,7 @@ public class Messages extends ListenerAdapter{
             }
 
             text = text.substring(maxLength);
-        }
+        }*/
     }
 
     public void deleteMessages(){
