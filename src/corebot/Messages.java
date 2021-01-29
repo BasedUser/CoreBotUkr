@@ -108,7 +108,7 @@ public class Messages extends ListenerAdapter {
         } catch (Exception ignored) {
             // may not be able to send messages to this user, ignore
         }
-        builder.append("Ласкаво проси");
+        builder.append("Ласкаво просимо");
         builder.append(event.getUser().getId());
         builder.append("> до українськомовного сервера Mindustry!");
         guild.getTextChannelById(CoreBot.generalChannelID).sendMessage(builder.toString()).queue();
