@@ -4,19 +4,19 @@ import java.io.File;
 
 public class CoreBot{
     public static final String releasesURL = "https://api.github.com/repos/Anuken/Mindustry/releases";
-    public static final long guildID = 790802770483216434L;
+    public static final long guildID = 802240559489613845L;
     public static final File prefsFile = new File("prefs.properties");
-    public static final long modChannelID = 663227511987240980L;
-    public static final long pluginChannelID = 617833229973717032L;
-    public static final long crashReportChannelID = 467033526018113546L;
-    public static final long announcementsChannelID = 391020997098340352L;
-    public static final long screenshotsChannelID = 553071673587400705L;
-    public static final long artChannelID = 754011833928515664L;
+    public static final long modChannelID = 803286895978741761L;
+    public static final long pluginChannelID = 0L;
+    public static final long crashReportChannelID = 0L;
+    public static final long announcementsChannelID = 0L;
+    public static final long screenshotsChannelID = 0L;
+    public static final long artChannelID = 0L;
     public static final long mapsChannelID = 416719902641225732L;
-    public static final long moderationChannelID = 790832327432470529L;
-    public static final long schematicsChannelID = 640604827344306207L;
-    public static final long baseSchematicsChannelID = 718536034127839252L;
-    public static final long generalChannelID = 790802778913112116L;
+    public static final long moderationChannelID = 802254084857528363L;
+    public static final long schematicsChannelID = 803286677615280168L;
+    public static final long baseSchematicsChannelID = 0L;
+    public static final long generalChannelID = 802241725791338506L;
 
     public static final long messageDeleteTime = 20000;
 
